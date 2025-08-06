@@ -1,0 +1,13 @@
+name: c-app
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  c-app:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          docker build -t c-app .
